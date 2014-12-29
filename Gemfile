@@ -41,3 +41,5 @@ gem 'spring',        group: :development
 gem 'rspec-rails'
 
 gem 'factory_girl_rails', group: :test
+
+gem 'faker', group: :test
