@@ -11,7 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141230213913) do
+ActiveRecord::Schema.define(version: 20150101220853) do
+
+  create_table "cards", force: true do |t|
+    t.integer  "user_id",                        null: false
+    t.string   "first",                          null: false
+    t.string   "second",                         null: false
+    t.float    "positive_percent", default: 0.0
+    t.integer  "positive_count",   default: 0
+    t.integer  "negative_count",   default: 0
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "cards", ["user_id"], name: "index_cards_on_user_id"
 
   create_table "users", force: true do |t|
     t.string   "username",               default: "", null: false
