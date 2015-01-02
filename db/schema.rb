@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150102144816) do
+ActiveRecord::Schema.define(version: 20150102145554) do
 
   create_table "boxes", force: true do |t|
     t.integer  "user_id",    null: false
@@ -32,8 +32,10 @@ ActiveRecord::Schema.define(version: 20150102144816) do
     t.integer  "negative_count",   default: 0
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "boxes_id"
   end
 
+  add_index "cards", ["boxes_id"], name: "index_cards_on_boxes_id"
   add_index "cards", ["user_id"], name: "index_cards_on_user_id"
 
   create_table "users", force: true do |t|
