@@ -44,3 +44,5 @@ gem 'factory_girl_rails', group: :test
 gem 'faker', group: :test
 
 gem 'devise'
+
+gem 'bower-rails'
