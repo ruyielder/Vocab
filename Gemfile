@@ -46,3 +46,5 @@ gem 'faker', group: :test
 gem 'devise'
 
 gem 'bower-rails'
+
+gem 'angular-rails-templates'
