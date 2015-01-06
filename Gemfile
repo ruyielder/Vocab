@@ -48,3 +48,5 @@ gem 'devise'
 gem 'bower-rails'
 
 gem 'angular-rails-templates'
+
+gem 'ng-rails-csrf'
