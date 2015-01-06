@@ -1,7 +1,8 @@
 vocab = angular.module('vocab',[
   "templates",
   "ngRoute",
-  "ngResource"
+  "ngResource",
+  "ng-rails-csrf"
 ])
 
 vocab.config([ '$routeProvider',
