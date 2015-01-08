@@ -1,0 +1,24 @@
+<div ng-controller="RegisterFormController">
+    <form novalidate ng-submit="saveUser(user)">
+        Name: <input type="text" name="username" ng-model="user.username"/><br />
+        <ul ng-show="errors('username')">
+            <li ng-repeat="error in errors('username')">{{ error }}</li>
+        </ul>
+
+        E-mail: <input type="email" ng-model="user.email" /><br />
+        <ul ng-show="errors('email')">
+            <li ng-repeat="error in errors('email')">{{ error }}</li>
+        </ul>
+
+        Password: <input type="password" ng-model="user.password" value="male" /><br />
+        <ul ng-show="errors('password')">
+            <li ng-repeat="error in errors('password')">{{ error }}</li>
+        </ul>
+
+        Password confirmation: <input type="password" ng-model="user.password_confirmation" value="male" /><br />
+        Remember me <input type="checkbox" ng-model="user.remember_me" /><br />
+
+        <input type="submit" value="Submit"/>
+    </form>
+
+</div>
